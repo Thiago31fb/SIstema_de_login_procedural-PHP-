@@ -1,0 +1,18 @@
+create database sistemalogin;
+use sistemalogin;
+
+create table usuario(
+id int not null auto_increment,
+nome varchar(90) not null,
+username varchar(90) unique not null,
+senha varchar(32)not null,
+
+primary key(id)
+);
+
+desc usuario;
+
+insert into usuario values
+(default,"Thiago Ferreira Barcelo", "admin",md5("12345678"));
+
+select * from usuario;
